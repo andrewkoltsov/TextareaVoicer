@@ -2,7 +2,7 @@ $(function(){
 	if (!localStorage["lang"]) {
 		localStorage["lang"] = 'en';
 	}
-	setTimeout(function(){
+	setInterval(function(){
 		var textareas = $('textarea[has_mic!=true]');
 		console.log(textareas.length);
 		textareas.each(function(i) {
