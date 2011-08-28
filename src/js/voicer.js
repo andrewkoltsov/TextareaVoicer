@@ -3,7 +3,7 @@ $(function(){
 		localStorage["lang"] = 'en';
 	}
 	setTimeout(function(){
-		var textareas = $('textarea');
+		var textareas = $('textarea[has_mic!=true]');
 		console.log(textareas.length);
 		textareas.each(function(i) {
 			$this = $(this);
