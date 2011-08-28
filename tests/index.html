@@ -2,35 +2,29 @@
 <html>
 <head>
   <title>PreferredWebApplications Tests</title>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="../src/js/jquery.js"></script>
+  
+  <!-- QUnit -->
   <link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
   <script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+  
   <!-- Helper functions file -->
   <script type="text/javascript" src="helper.js"></script>
-  <!-- Tested modules are included here -->
   
+  <!-- Tested modules are included here -->
+  <script type="text/javascript" src="../src/js/voicer.js"></script>
   <!-- Test suites are included here -->
-  <script type="text/javascript" src="unit/content-script.js"></script>
-  <script type="text/javascript" src="unit/browser-action.js"></script>
-  <script type="text/javascript" src="unit/options-page.js"></script>
+  <script type="text/javascript" src="unit/voicer.js"></script>
   
 </head>
 <body>
-  <h1 id="qunit-header">PreferredWebApps QUnit tests</h1>
+  <h1 id="qunit-header">TexareaVoicer QUnit tests</h1>
   <h2 id="qunit-banner"></h2>
   <div id="qunit-testrunner-toolbar"></div>
   <h2 id="qunit-userAgent"></h2>
   <ol id="qunit-tests"></ol>
   <div id="qunit-fixture">
-    <ul>
-      <li><a id="mailto-with-subject" href="mailto:someone@example.com?Subject=Hello%20again">Send Mail</a></li>
-      <li><a id="mailto-without-subject" href="mailto:someone@example.com">Send Mail</a></li>
-      <li><a id="mailto-subject-with-space" href="mailto:someone@example.com?Subject=Hello again">Send Mail</a></li>
-      <li><a id="mailto-dots" href="mailto:some.one@ex.ample.com?Subject=Hello%20again">Send Mail</a></li>
-      <li><a id="mailto-file-link" href="mailto.html">Send Mail</a></li>
-      <li><a id="mailto-another-protocol" href="is-not-mailto:someone@example.com?Subject=Hello%20again">Send Mail</a></li>
-      <li><a id="mailto-capitals" href="MAILTO:SOMEONE@example.com?Subject=Hello%20again">Send Mail</a></li>
-    </ul>
+
   </div>
 </body>
 </html>
