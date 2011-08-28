@@ -14,12 +14,15 @@ tabCallbacks.forEach(function(callback, callbackId) {
 		if (typeof tabId !== 'number') {
 			tabGetter = chrome.tabs.getCurrent;
 		}
+		// ULTRA HARD CODE
+		if (localStorage.lang == 'ru') {
+			contentScript.file = '/js/content-script-ru.js';
+		}
 		tabGetter(function(tab) {
 			if (! /^http(|s)/.test(tab.url) || tab.status != 'complete') {
 				return;
 			}
-			chrome.tabs.executeScript(tab.id, contentScript, function() {
-			});
+			chrome.tabs.executeScript(tab.id, contentScript, function() {});
 		});
 	});
 });

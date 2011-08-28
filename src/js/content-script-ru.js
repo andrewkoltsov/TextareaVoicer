@@ -9,7 +9,7 @@
 					'class': 'mic-for-textarea',
 					'x-webkit-speech': 'x-webkit-speech',
 					'id': inputId,
-					'lang': 'en',
+					'lang': 'ru',
 					'has_mic': 'true'
 				},
 				style = {
