@@ -1,9 +1,10 @@
 function send_new_locale(locale) {
-	localStorage["lang"] = locale;
+	localStorage.setItem("lang", locale);
 	chrome.browserAction.setIcon({path: "/images/flags/" + locale + ".png"}); 
 	chrome.extension.sendRequest({'locale': locale}, function(response) {
 		console.log(response);
 	});
+	window.close();
 }
 
 
