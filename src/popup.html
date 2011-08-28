@@ -1,11 +1,11 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="jquery"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
-<span id="set_lang_to_en"><img src="en.png" alt="EN"></span>
-<span id="set_lang_to_ru"><img src="ru.png" alt="RU"></span>
+<span id="set_lang_to_en"><img src="/images/flags/en.png" alt="EN"></span>
+<span id="set_lang_to_ru"><img src="/images/flags/ru.png" alt="RU"></span>
 <script type="text/javascript">
 	$(function() {
 		var extensionPath = [
@@ -15,12 +15,12 @@
 		$('#set_lang_to_en').click(function (){
 			localStorage["lang"]='en';
 			console.log(chrome.browserAction);
-			chrome.browserAction.setIcon({path: extensionPath + "/en.png"}); 
+			chrome.browserAction.setIcon({path: extensionPath + "/images/flags/en.png"}); 
 			//window.close();
 		});
 		$('#set_lang_to_ru').click(function (){
 			localStorage["lang"]='ru';
-			chrome.browserAction.setIcon({path: extensionPath + "/ru.png"});
+			chrome.browserAction.setIcon({path: extensionPath + "/images/flags/ru.png"});
 			//window.close();
 		});
 
