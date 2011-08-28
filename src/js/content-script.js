@@ -13,7 +13,7 @@
 		    	'class': 'mic-for-textarea',
 		    	'x-webkit-speech': 'x-webkit-speech',
 		    	'id': inputId,
-		    	'lang': localStorage.lang,
+		    	'lang': localStorage.lang || 'en',
 			    'has_mic': 'true'
 		    },
 		    style = {
