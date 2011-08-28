@@ -1,4 +1,5 @@
 (function() {
+	console.log('en');
 	var textareas = document.querySelectorAll('textarea');
 	Array.prototype.forEach.call(textareas, function(textarea, i) {
 		var inputId = ['mic', i, textarea.id || 'unid'].join('_');
