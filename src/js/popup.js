@@ -1,17 +1,17 @@
+function send_new_locale(locale) {
+	localStorage["lang"] = locale;
+	chrome.browserAction.setIcon({path: "/images/flags/" + locale + ".png"}); 
+	chrome.extension.sendRequest({'locale': locale}, function(response) {
+		console.log(response);
+	});
+}
+
+
 $(function() {
-	var extensionPath = [
-		"chrome-extension",
-		chrome.i18n.getMessage('@@extension_id')
-	].join('://');
 	$('#set_lang_to_en').click(function (){
-		localStorage["lang"]='en';
-		console.log(chrome.browserAction);
-		chrome.browserAction.setIcon({path: extensionPath + "/images/flags/en.png"}); 
-		//window.close();
+		send_new_locale('en');
 	});
 	$('#set_lang_to_ru').click(function (){
-		localStorage["lang"]='ru';
-		chrome.browserAction.setIcon({path: extensionPath + "/images/flags/ru.png"});
-		//window.close();
+		send_new_locale('ru');
 	});
 });
