@@ -4,6 +4,7 @@ function send_new_locale(locale) {
 	chrome.extension.sendRequest({'locale': locale}, function(response) {
 		console.log(response);
 	});
+	window.close();
 }
 
 
