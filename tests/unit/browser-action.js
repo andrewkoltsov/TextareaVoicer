@@ -1,3 +1,15 @@
 $(document).ready(function(){
-  module("Popup window");
+  module("Browser action");
+  
+  test("Settings button", 1, function() {
+  
+  });
+  
+  test("Save button", 1, function() {
+  
+  });
+  
+  test("App selection combobox", 1, function() {
+  
+  });
 });
