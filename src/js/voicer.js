@@ -19,7 +19,6 @@ tabCallbacks.forEach(function(callback, callbackId) {
 				return;
 			}
 			chrome.tabs.executeScript(tab.id, contentScript, function() {
-				console.log('fired!', tab.url, arguments);
 			});
 		});
 	});
